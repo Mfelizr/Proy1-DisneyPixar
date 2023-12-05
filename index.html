@@ -4,37 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Maqueta Disney-Pixar</title>
+    <title>Disney-Pixar</title>
 </head>
 <body>
     <header class="container-flex">       
         <!-- Menu para moviles -->
         <div class="menu-inblock">    
-            <input type="checkbox" id="menu-inblock">
-            <label for="menu-inblock">☰</label>           
-            <ul>                
-                <li><a href="#">DISNEY+</a>
-                    <ul>
-                        <li><a href="#">Más información</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">TIENDA</a> </li>
-                <li><a href="#">PELÍCULAS</a>  
-                    <ul>
-                        <li><a href="#">Más información</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">VIAJES</a>  
-                    <ul>
-                        <li><a href="#">Más información</a></li>                
-                    </ul>
-                </li>
-                <li><a href="#">DISNEY100</a></li>
-            </ul>
+            <input type="checkbox" id="open-menu-inblock">
+            <label for="open-menu-inblock">☰</label>   
+            <!-- <input type="checkbox" id="close-menu-inblock">
+            <label for="close-menu-inblock">X</label>   -->          
+                <ul class="menu-ul">                
+                    <li><a href="#">DISNEY+</a>
+                        <ul>
+                            <li><a href="#">Más información</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">TIENDA</a> </li>
+                    <li><a href="#">PELÍCULAS</a>  
+                        <ul>
+                            <li><a href="#">Más información</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">VIAJES</a>  
+                        <ul>
+                            <li><a href="#">Más información</a></li>                
+                        </ul>
+                    </li>
+                    <li><a href="#">DISNEY100</a></li>
+                </ul>
+                   
         </div>
         <!-- Menu para ordenador -->
         <div class="logo">
-            <a href="#"><img id="logo" src="images/disney_logo.png" alt=""></a>
+            <a href="https://www.disney.es/"><img id="logo" src="images/disney_logo.png" alt=""></a>
         </div>
         <div class="menu-inline">            
             <nav>
@@ -43,31 +46,31 @@
                     <div class="dropdown-list">
                         <a href="#">Más información</a>
                         <a href="#">Todo lo que necesitas saber de Disney+</a>
-                        <a href="#">Link 3</a>
-                        <a href="#">Link 4</a>
-                        <a href="#">Link 5</a>
-                        <a href="#">Link 6</a>
+                        <a href="#">Qué ver en Disney+</a>
+                        <a href="#">Marvel en Disney+</a>
+                        <a href="#">Regala Disney+</a>
+                        <a href="#">Bono Cultural Joven</a>
                     </div>
                 </div>    
                 <a href="#">TIENDA</a> 
                 <div class="container-dropdown">
                     <a href="#">PELÍCULAS</a> 
                     <div class="dropdown-list">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
+                        <a href="#">Novedades</a>
+                        <a href="#">The Marvels</a>
                         <a href="#">Wish: El poder de los deseos</a>
-                        <a href="#">Link 4</a>
-                        <a href="#">Link 5</a>
-                        <a href="#">Link 6</a>
-                        <a href="#">Link 7</a>
+                        <a href="#">Películas de Lucasfilms</a>
+                        <a href="#">Películas de Pixar</a>
+                        <a href="#">Películas de Marvel</a>
+                        <a href="#">Calendario de Estrenos</a>
                     </div>
                 </div>                    
                 <div class="container-dropdown">
                     <a href="#">VIAJES</a>     
                     <div class="dropdown-list">
-                        <a href="#">Disneyland Paris</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
+                        <a href="#">Disneyland© Paris</a>
+                        <a href="#">Walt Disney Worl</a>
+                        <a href="#">Disney Cruise Line</a>
                     </div>                  
                 </div>
                 <a href="#">DISNEY100</a>                
@@ -80,7 +83,7 @@
     <main>
         <div class="move-text"><h1>Películas de Pixar</h1></div>
         
-        <div class="container-flex reduce-img">
+        <div class="container-flex justify-center reduce-img">
             <article>
                 <a href="https://www.disney.es/peliculas/coco"><img src="images/coco.jpeg" alt="Pelicula Coco"><h3>Coco</h3></a>                    
             </article>
@@ -114,6 +117,10 @@
                 <a href="https://www.disney.es/peliculas/Toy-Story-4"><img src="images/toystory4.jpeg" alt="Pelicula ToyStory4"><h3>Toy Story 4</h3></a>    
             </article>
         </div>
+        <div class="container-center">
+            <button id="btn-vermas">VER MÁS</button>
+        </div>
+
         <div class="container-center img-rrss">
             <p>Sigue a Disney en:</p>
             <a href="https://www.facebook.com/DisneySpain"><img src="images/fb2.png" alt="facebook"></a>
@@ -126,18 +133,18 @@
             <a href="#"><img src="images/disney_logo.png" alt=""></a>            
         </div>
         <div>
-            <a href="">Ayuda</a>
-            <a href="">Suscríbete</a>
-            <a href="">Mapa del sitio</a>
-            <a href="">Condiciones de uso</a>
-            <a href="">Sobre privacidad en la UE</a>
-            <a href="">Política de Privacidad</a>
-            <a href="">Cookies</a>
-            <a href="">Gestionar su configuración de cookies</a>
-            <a href="">Publicidad relacionada</a>
-            <a href="">Sobre Nosotros</a>
-            <a href="">Disney Media Sales and Partnerships</a>
-            <a href="">The Walt Disney Company</a>
+            <a href="#">Ayuda</a>
+            <a href="#">Suscríbete</a>
+            <a href="#">Mapa del sitio</a>
+            <a href="#">Condiciones de uso</a>
+            <a href="#">Sobre privacidad en la UE</a>
+            <a href="#">Política de Privacidad</a>
+            <a href="#">Cookies</a>
+            <a href="#">Gestionar su configuración de cookies</a>
+            <a href="#">Publicidad relacionada</a>
+            <a href="#">Sobre Nosotros</a>
+            <a href="#">Disney Media Sales and Partnerships</a>
+            <a href="#">The Walt Disney Company</a>
         </div>
         <div>
             <p>© Disney © Disney•Pixar © & ™ Lucasfilm LTD © Marvel. Reservados todos los derechos</p>

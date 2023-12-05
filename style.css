@@ -8,12 +8,15 @@ html{
 }
 .container-flex{
     display: flex;    
-    align-items: center; 
-    /* justify-content: space-between;  */
+    align-items: center;     
     flex-wrap: wrap ;  
+    gap: 5px;
 }
 .container-center{
-    text-align: center;          
+    text-align: center;               
+}
+.justify-center{
+    justify-content: center; 
 }
 a{
     color: black;
@@ -50,15 +53,28 @@ nav{
     display: block;
 }
 article{
-    margin: 5px 10px 5px 10px;
+    margin: 5px;
     width: 320px;
-}
+    /* flex: 1 1 18%;*/
+} 
 img{
-    border-radius: 5px;      
+    border-radius: 5px;              
+    margin: 5px;
 }
+article img:hover {
+    -ms-transform: scale(1.05); /* IE 9 */
+    -webkit-transform: scale(1.05); /* Safari 3-8 */
+    transform: scale(1.05); 
+    box-shadow: 4px 4px 4px lightgrey;
+  }
+
 .img-rrss img{
     width: 1.5em;
     height: 1.5em;
+}
+.img-rrss p{
+    font-size: 1.3em;
+    font-weight: lighter;    
 }
 
 h1{
@@ -80,24 +96,34 @@ footer img{
     width: 80px;
     height: 35px;
 }
-
 #logo{
-    width: 7rem;
+    width: 7rem;        
 }
-
+/*MENU MOVILES*/
 .menu-inblock{
     display: none;
+}
+.menu-ul{
+    width: 100vw;
+    height: 100vh;
+    background: #00000078;
+    position: absolute;    
+    /*display: none;*/
+    top: 0;
+    left: 0;
 } 
 input, ul{
-    display: none;
+    display: none;   
 }
-
 /*COMENTADO HASTA CORREGIR*/
-/* input:checked  ~ ul{
+input:checked  ~ ul{
     display:block;
 
-  } */
-  label {         
+  }
+/* #close-menu-inblock {
+    display: none;
+}*/
+label {         
     margin-left: 10px;      
     line-height: 30px;
     font-weight: bold;
@@ -111,33 +137,55 @@ input, ul{
     list-style: none;
     border-bottom: 1px solid grey;
   }
+  button {
+    background-color: rgb(0, 119, 218);
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 30px;
+    size: 30rem;
+    padding: 15px 100px;
+  }
 
 /*Ajustes para cambio de tamaño de pantalla*/
 @media (max-width: 768px) {
-   
-    .menu-inline {
+     .menu-inline {
         display:none;
     } 
     .logo{
         margin-left: 25%;         
-    }          
-
+    }         
+    
     .menu-inblock{
         display: block;
         align-content: flex-start;        
-    }
-    .reduce-img img{
+    }   
+     .reduce-img img{
         width: 20rem;        
-   }
+   } 
+}
+@media (min-width: 960px){
+    button {
+        display: none;
+    }
+    
+
 }
 @media (min-width: 1100px) {
-   
+    input:checked  ~ ul{
+        display:none;
+      }   
+    
+    .menu-inblock{
+        display: none;   
+    }    
    .move-text{
     margin-left: 25%;  
    }
-   .reduce-img img{
+    .reduce-img img{
         width: 15rem;        
-   }
+   } 
 }
 
 
