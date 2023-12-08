@@ -12,6 +12,7 @@ html{
     flex-wrap: wrap ;  
     gap: 5px;
 }
+
 .container-center{
     text-align: center;               
 }
@@ -54,18 +55,18 @@ nav{
 }
 article{
     margin: 5px;
-    width: 320px;
-    /* flex: 1 1 18%;*/
+    /*width: 320px; */
+    flex: 1 0 19%;    
 } 
 img{
-    border-radius: 5px;              
-    margin: 5px;
+    border-radius: 5px;                  
 }
 article img:hover {
     -ms-transform: scale(1.05); /* IE 9 */
     -webkit-transform: scale(1.05); /* Safari 3-8 */
     transform: scale(1.05); 
     box-shadow: 4px 4px 4px lightgrey;
+    transition: .3s ease-in-out; /*new*/
   }
 
 .img-rrss img{
@@ -107,27 +108,27 @@ footer img{
     width: 100vw;
     height: 100vh;
     background: #00000078;
-    position: absolute;    
-    /*display: none;*/
-    top: 0;
+    position: absolute;        
+    top: 2.5em;
     left: 0;
 } 
 input, ul{
     display: none;   
 }
-/*COMENTADO HASTA CORREGIR*/
+
 input:checked  ~ ul{
     display:block;
-
   }
-/* #close-menu-inblock {
-    display: none;
-}*/
-label {         
-    margin-left: 10px;      
+
+label { 
+    box-sizing: border-box;
+    display: inline-block;    
+    width: 30px;
+    height: 30px;
     line-height: 30px;
     font-weight: bold;
-    text-align: center;    
+    text-align: center;
+    user-select: none;            
   }  
   li {
     display: block;
@@ -149,7 +150,7 @@ label {
   }
 
 /*Ajustes para cambio de tamaño de pantalla*/
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
      .menu-inline {
         display:none;
     } 
@@ -162,17 +163,16 @@ label {
         align-content: flex-start;        
     }   
      .reduce-img img{
-        width: 20rem;        
-   } 
+        width: 100%;        
+        margin: 0;
+   }    
 }
-@media (min-width: 960px){
+@media screen and (min-width: 960px){
     button {
         display: none;
-    }
-    
-
+    }    
 }
-@media (min-width: 1100px) {
+@media screen and (min-width: 1100px) {
     input:checked  ~ ul{
         display:none;
       }   
@@ -187,6 +187,28 @@ label {
         width: 15rem;        
    } 
 }
+/*new*/
+@media screen and (max-width: 960px){    
+    .ocultar-peli a{
+        display: none
+    }
+}
+
+article a{
+    width: 100%;
+    display: block;
+}
+
+.container-flex article{
+    width: calc(((100%-30px)/2)-0.01px);
+    display: inline-block;        
+}
+img{
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+/*end new*/
 
 
 
